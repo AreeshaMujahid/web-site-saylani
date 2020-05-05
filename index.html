@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+
+
+    <title>SAYLANI WEB</title>
+</head>
+
+<body>
+
+
+    <!-- navbar -->
+    <div id="navbar12">
+
+
+        <!-- icons -->
+        <div id="icons_12">
+            <ul id="iconul">
+                <li> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHsAAAB7CAMAAABjGQ9NAAAAWlBMVEVCZ7L///89ZLFshb/d4u8wXK41X6/l6fKcq9L6+/1bebmJnMqmtddhf75GarSxvtzt8PZUdLh1jcTH0OVNcLcnVquUps/X3ezBy+KgsNXQ2OqBl8i7xuGPocyxA958AAAB+UlEQVRoge3bbW+CMBAH8PakV1EeqsJEnd//aw7cZmaosBy9dg/3T/SVyS9Aba8lp7TWrigrFTNVWbjeVVrXgBCVVqoX68Guo8vveq2VgxR0j4NTBSahlcJClWkuu7/wUsUd4V+TTpZIJJLfFhgSX8W2VU2z69M0FaBpWxOlRgBT7V+6zLp8iHPO2ux4qNcX9pUDYd8NlZgnG94rB7xmfljrnNc25VOZ2QZzei7z2qC6KZrXPk/SnLY5TNOM9vSzZrVhM0fz2XhMZuNllmazYWJOYbZhNU9z2eY1nV3ZZDbs82/YPGsorv2YO5yu1+09LLWDfzq1lwoRcPjA7YuDVq3vcR+rKMcZ4CmSmKuUO914hlptYtD9OuKxV3EqcyjHtmsi2Z4Z1UbakPjsLNKZndeOM9TEFltssf+gPV7HuGy8OvsQX9liRwmyoj8rS6eTB3klRLNdE4Am2jYETbTPQaoJmt0FGfk0u0hobxPe8zAFO8kOtEci2WH+3jQ7C0LT7HOYjQrJfg2zUSHZp4T2NuE9D7QfJ9m7QPbsUfk4ebADLngI+uq19vE3XEcB/7dGFltsscUWW2yxxRZbbLHFFltsscUW+6fYS4/d6Ha1uH+MbEO5uG+ObGOxuF+Qag/9gkv7JIn2rU9yaX8oyf7sD13YF0uxP/pi3wDoexx+Wba5xgAAAABJRU5ErkJggg==" alt="facebook"> </li>
+                <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKUAAAB8CAMAAAA/xIAPAAAAn1BMVEX29vYEn/MEn/H29vQAnfP09/T29fj8+PX49fYAnPT69/YAlvADoPAAnPAAme4Am+ru+Pf///rx9vnJ5vil2fOZz+ym3PPH6/bq9vqr2u5Zve4Al/dqu/Sv2PPg7vI2pOrq+O////R1v+ul1fdOsvCFy+xTtevQ7PnX8fhrv/G83fDr8fs9sPv5//9tweo1p/OQyOyTxO7j+vs1rvJ1uPZg1+ccAAAEvUlEQVR4nO2aaXPiOBBAbVmyjpZPcIDgIHAggDMZMjj//7etbBI2HAZCJWJqV68gH1J2+VW3unUYx7FYLBaLxWKxWCwWi8VisVgslv8hTFBBqfAcdmuTdoSTdrpZdtfrx2xH8+9xZiIe3EegGUKUP6SJ7zX/9zxGRmY0xfkr0gcVYYRc7OL6owakuYnRcU/Nz9//DcTdyZloiLgAjlxXS9ZIicNi7DGa9B+nMCUmJEUJMyK8U1f0FdcBrKlD6eqQYngazR+fAAJYmJBkdAlRNzl1SToNajvpYqkVpf7jIoQUAu7KYXHy1u/CJ8A5z9qf5dGcSx1EVzZR1N8m8ahJflgQ4tNTifgexBxcl/M74bddUAaftHZAwdMzc/xy9OOWSQZIRwmKpKVU41+N4zFJPHsZlUVU/Hz9JFmIagXI+5QdeRwtQ9ko1rWzC57+Vqtg+DT++YYpMt7ExYVVL/EORhiZ5HWf3DTKfbC+lVdrA/1SZLAdZUWf7YeFxarONj6M5Aa+WtOfl3ToHTTtGmkZvirpXmBYT35082NDE9TCQIXrWI5gGyWJYTp/2fHUFf5hdyCJFOSpIIfD5PshTvQ5l1zmcyr+FaUPm+I6SlD4zCEmYunRWbQTIAyq+yw+Mk8HYZujzvdAeEZmce0x39VAEgfq6WGe+lrVrzN+wpKaSHeNJwrYf7xeTUBVZOW8P17IYz1oa2nGsbYcSX5ogDDnAZIr1Toq9SzeMbK0bCQZLaMjmh9hRe3Voy3bZv/vtuzEQhdyW1JPEjybGpYir177SSdsj2Z7mOXIM6RJM73lUvf3wRWW074pS9EFVC8l2muk3TInhoalw9a15VXw14kpSydRVwzJjWU5MZVxhz42i6KvxxOHa2OSOuXVlcGsjGwf35l0h/KK2tHDUs/ixoJJJr+DazRxTzjmLD0xnnL5dckqNaZY44s0P1gWnQUykwmv8eI/kuOP06qLkBATx6ym54vFMuD8C5ZBQT3frCVLHULWWXW5JZYLwRyjCXfYYFks36bVxTWEguWLL8xKOt56CAHG+OL2jmBkunY0yRLQ0WO14446lLc482drhS+3dANl4ATrCLQDX1hjRgMa38LSSbohv9SSF0SY2j3uQbrReb8GrPrMdOFsmfQUXDI0cdRjxtboB3iUZCo6P/+Epd6F+zfzZN6k31lW0cntpITNsvJWGa8RIknW96eaO89EfRh4W03y0ludOAt0oX4h4TmGZ/BP+A4TySKHUw0JsomhA8s2WOIvChmg9mUm54PG8eAdwQ+jh5d+rs8Ypcn67i0M0faw/wAEq46x88od/OdUj8V4tOjNpgEHV7av3QK5jHWfvMX8nd5V+Vs+VQjg/eXUcWTEVTkWN+qSTPSWQ73O4Lh5g9daN7x6JIz575amxyVzBOnossbNe8aWQ18O8vWZMnbLDqlXbYvXVRjUoTy0RBzCvBtPfGZ6/3CoyUaDQiG9h9ypbsx5KKvZfDxpNos3bpS61D1B485jMY0gBF1IMBwChCqfDRYvVBDtZ+Q93iWIZJySfm/QrX/bNCgX69hjTS+9tdgOm2AJ+s77anwbw79Ldo/mNzzMfPexWCwWi8VisVgsFovFYrFYLP81/gEzrkaOCKuTWQAAAABJRU5ErkJggg==" alt="twitter"></li>
+                <li><img src="data:image/jpeg;base64,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" alt="instagram"></li>
+               
+                <li><img src="data:image/png;base64,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" alt="whatsapp"></li>
+            </ul>
+
+        </div>
+
+        <!-- navbar text -->
+
+        <div id="textfirst">
+
+            <p>Millions of people's life has changed, millions more awaiting your donation</p>
+
+        </div>
+
+
+        <!-- navbar buttons -->
+        <div id="nav_btns">
+            <input type="button" value="UK Donor">
+
+            <input type="button" value="Donate Now">
+
+            <input type="button" value="SMIT Results">
+
+        </div>
+        <hr>
+
+    </div>
+
+
+    <!-- menu bar -->
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top justify-content-around">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <div id="saylani_logo">
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/Saylani-logo.png" alt="Saylani logo">
+        </div>
+
+        <div id="menuBar">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menubarli" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active ">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Saylani Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Future Project
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Donation
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- slider -->
+
+
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-interval="10000">
+                <img src="Capture.PNG" class="d-block w-100" alt="...">
+            </div>
+        
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- marquee -->
+    <div id="marque">
+        <marquee direction="left" scrolldelay="100" onmouseover="this.stop();" onmouseout="this.start();">(News-1
+            Dated:15-06-2019)
+            PIAICNext Phase Admission in Islamabad And Faisalabad" . More
+            Details (News-2 Dated:15-05-2019) Saylani Welfare Announced "Donation Application" . More Details (News-3
+            Dated:07-05-2019) Alhamdulillah Saylani Organized 200+ Locations For Iftar And Sehri In This Holy Month .
+            More
+            Details (News-4 Dated:08-03-2019) Saylani Welfare Distributing Ration & Clothes to affected people of
+            Balochistan. More Details (News-5 Dated:25-02-2019) PIAIC Entrance Exam Merit Ranking List Announced. More
+            Details (News-6 Dated:23-02-2019) President of Pakistan (Dr. Arif Alvi) Visited Saylani Welfare
+            International
+            Trust HeadOffice Karachi. More Details (News-7 Dated:19-02-2019) Dr Jamil Ahmed (Additional Inspector
+            General of
+            Police) & Atiqmir Visit Saylani Welfare International Trust, Saylani Mass I.T. Training. More Details
+
+        </marquee>
+
+    </div>
+
+
+    <div id="intro">
+
+        <div id="heading">
+            <h1 class="intro ab">INTRO<span class="duction ab">DUCTION</span></h1>
+        </div>
+
+
+        <div id="miniLogo">
+
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/favicon.png" alt="logo">
+
+        </div>
+
+        <div id="text">
+            <p>
+                Established in May 1999 by famous spiritual and religious scholar Maulana Bashir Ahmed Farooqui, Saylani
+                Welfare International Trust was built on the fundamentals of breaking the cycle of poverty, alleviating
+                the financial troubles of the poor, giving people a chance to live a dignified life and spreading
+                happiness.
+                <br><br>
+                We are an organization that believes in lighting up the lives of underprivileged people across the
+                world. We endeavor to provide the best quality services in areas including food, education, medical and
+                social welfare free of cost to people living in the dark. With over 60 different sectors, we feed
+                thousands of hungry people each day, hundreds more are given the hope of life through medical health
+                care, many are educated to become leaders of tomorrow and several are given the opportunity to stand on
+                their feet financially.
+                <br><br>
+                Today, we are proud to say that our physical presence extends throughout Pakistan with a vast network of
+                125 branches operating in major cities including Karachi, Lahore, Islamabad, Rawalpindi, Hyderabad and
+                Faisalabad. Apart from Pakistan, we have overseas offices in the UK, USA and UAE as well. Our worldwide
+                branches are operating under the guidance of a team of over 2,000 working professionals who help almost
+                125,000 people on a daily basis.
+                <br><br>
+                We strongly believe that a little help goes a long way and our work would not be possible without the
+                generous support of our valuable donors. Our local and international donors have graciously lent us a
+                hand by supporting our causes and enabling us to serve the needs of people in need.
+            </p>
+        </div>
+
+    </div>
+
+
+
+    <div id="info">
+
+        <div class="itemms">
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/icon_food_png.png" alt="pic">
+
+            <h1>125,000</h1>
+
+            <p>DAILY DASTRAKHAN<span class="snd">(MONTHLY)</span></p>
+        </div>
+
+        <div class="itemms">
+
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/icon_family_png.png" alt="pic">
+
+            <h1>7,500</h1>
+
+            <p>FAMILY ADOPTION<span class="snd">(MONTHLY)</span></p>
+        </div>
+
+        <div class="itemms">
+
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/icon_medical_png.png" alt="pic">
+
+            <h1>43,749</h1>
+
+            <p>MEDICAL<span class="snd">(MONTHLY)</span></p>
+        </div>
+
+
+        <div class="itemms">
+
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/icon_education_png.png" alt="pic">
+
+            <h1>180,000</h1>
+
+            <p>EDUCATION<span class="snd">(MONTHLY)</span></p>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- cards cards -->
+    <div id="cards">
+
+
+        <div id="heading1">
+            <h1 class="intro ab">WHAT WE <span class="duction ab">ARE DOING?</span></h1>
+        </div>
+
+        <div id="miniLogo">
+
+            <img src="https://www.saylaniwelfare.com/public_html/images/saylani/favicon.png" alt="logo">
+
+        </div>
+
+        <div id="cardsbox">
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/onlinesadqah.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">ONLINE SADQAH</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/welfare.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">WELFARE</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/medical.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">MEDICAL</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/Dastarkhwan.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">DASTARKHWAN</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/ROPLANT.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">RO PLANT
+                    </p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/education.png" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">EDUCATION</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <!-- mission mission -->
+
+
+
+
+    <div id="mission">
+
+
+        <div id="boxhead">
+
+            <div class="headingm">
+                <h3>MISSION AND UPCOMING PROJECTS<h3>
+            </div>
+
+
+
+
+
+            <div id="miniCards">
+
+
+
+
+                <div class="mini media">
+                    <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/Hepatitis.png" alt="">
+
+                    <h4>HEPATITIS</h4>
+                </div>
+
+
+
+                <div class="mini media">
+                    <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/housing.png" alt="">
+
+                    <h4>HOUSING SOCIETY
+                    </h4>
+                </div>
+
+
+
+                <div class="mini media ">
+                    <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/IT.png" alt="">
+
+                    <h4>IT LITERACY
+                    </h4>
+                </div>
+
+
+
+                <div class="media mini">
+                    <img src="https://www.saylaniwelfare.com/public_html/images/saylani/icons/tharparkar.png" alt="">
+
+                    <h4>THARPARKAR
+                    </h4>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="upmarq">
+            <h3>Upcoming Events</h3>
+            <hr><br>
+            <marquee direction="up" scrolldelay="190" onmouseover="this.stop();" onmouseout="this.start();">Saylani
+                Welfare Distributing Ration & Clothes to affected people of
+                Balochistan .More Details <br><br>
+
+                Entry Test Accouncement (Graphic Designing & Video Editing/Animation Course) On Sunday 3rd March
+                2019 @ 11:00Am Vanue: 4rh Floor, Saylani Welfare International Trust HeadOffice Bahadurabad .More
+                Details <br><br>
+
+                Dr Jamil Ahmed (Additional Inspector General of Police) & Atiqmir Visit Saylani Welfare
+                International Trust, Saylani Mass I.T. Training .More Details <br><br>
+
+                PIAIC Entrance Exam Merit Ranking List Announced.More Details</marquee>
+        </div>
+
+
+
+        <!-- image gallery -->
+
+        <div id="imagegallery">
+
+            <div id="heading1">
+                <h1 class="intro ab">IMAGE <span class="duction ab">GALLERY</span></h1>
+            </div>
+
+            <div id="miniLogo">
+
+                <img src="images/mini_logos/mini_logo.png" alt="logo">
+
+            </div>
+
+
+
+
+
+            <!-- images images -->
+
+            <div id="imagesgallery">
+                <img src="https://www.saylaniwelfare.com/public_html/images/saylani/gallery/rashan2.jpg" alt="">
+                <img src="https://www.saylaniwelfare.com/public_html/images/saylani/gallery/food.jpg" alt="">
+                <img src="https://www.saylaniwelfare.com/public_html/images/saylani/gallery/hazrat.jpg" alt="">
+               
+                
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+        <!-- details details -->
+
+        
+
+            <div id="details123">
+
+
+                <div id="address12">
+                    <p>Head Office,<br>
+                        A-25, Bahadurabad Chowrangi Karachi, Pakistan</p>
+
+
+                    <ul>
+                        <li> 📞UAN:111-729-526 </li>
+                        <li>📞(+0092-213) 4130786-90</li>
+                        <li>📞CELL: 92-311-1729526</li>
+                        <li> 📞USA NO +1(716)941 7792 </li>
+                        <li>✉️UK NO (+44)115 970 6256 </li>
+                        <li>🌎info@saylaniwelfare.com</li>
+                    </ul>
+                </div>
+
+
+                <div id="usefullinks">
+                    <p>Useful Links</p>
+                    <hr>
+                </div>
+
+                <div id="contactlinks">
+                    <p>Connect With Us</p>
+
+                    <ul>
+                        <li><img src="images/footer/facebook_circle-512.webp" alt=""></li>
+                        <li><img src="images/footer/twitter-icon.png" alt=""></li>
+                        <li><img src="images/footer/insta.webp" alt=""></li>
+                        <li><img src="images/footer/youtube-icon-blue.png" alt=""></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="copyright" >
+                <p>Copyright © 2020 Saylani Welfare</p>
+            </div>
+
+            
+    </div>
+
+
+    <div id="topbutton">
+        <button onclick="topFunction()" class="topbutt">^</button>
+    </div>
+
+
+
+
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+        <!-- <button></button> script -->
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+</body>
+
+</html>
